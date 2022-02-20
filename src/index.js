@@ -82,7 +82,7 @@ async function run() {
     } else {
       core.info('Could not read an card code from PR title.')
     }
-    core.info(`Issue code regexp: ${PR_CARD_CODE_REGEXP} --- ${PR_ENFORCE_CARD_EXISTS ? 'enforce' : 'dont enforce'}`)
+    core.info(`Issue code regexp: ${PR_CARD_CODE_REGEXP} -- ${PR_ENFORCE_CARD_EXISTS ? 'enforce' : 'dont enforce'}`)
     return
   }
 
