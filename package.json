@@ -1,0 +1,22 @@
+{
+  "name": "unh-trello",
+  "version": "1.0.0",
+  "description": "Github action to enforce naming convention on PR titles and commit descriptions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild step1/src/index.js --bundle --platform=node --target=node16 --outfile=step1/dist/index.js"
+  },
+  "author": "dimvic",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "node-fetch": "^2.3.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.11"
+  }
+}

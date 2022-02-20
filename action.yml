@@ -1,0 +1,48 @@
+name: 'Trello integration'
+description: 'Trello integration'
+inputs:
+  github-token:
+    description: 'Token used to update PR description and add labels. Can be passed in using {{ secrets.GH_TOKEN }}'
+    required: true
+  trello-api-key:
+    description: 'Trello app API key. https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/'
+    required: true
+  trello-token:
+    description: 'API Token used to access the Trello REST API. Must have access to selected Trello board.'
+    required: true
+  trello-board-id:
+    description: 'Trello board ID.'
+    required: true
+
+  pr-enforce-card-exists:
+    description: 'Whether to enforce Trello card code existence in PR title.'
+    required: false
+    default: 'true'
+  pr-update-title:
+    description: 'Whether to update PR title with Trello card title.'
+    required: false
+    default: 'true'
+  pr-update-description:
+    description: 'Whether to update PR body to include Trello card description.'
+    required: false
+    default: 'true'
+  pr-card-code-regexp:
+    description: 'Regexp used to match Trello card code in PR title.'
+    required: false
+    default: '^\[(\w+)\]'
+  pr-skip-base-ref-regexp:
+    description: 'Skip checks for PRs with a base ref matching this regexp (target ref: ie "^deploy/").'
+    required: false
+    default: ''
+  pr-skip-head-ref-regexp:
+    description: 'Skip checks for PRs with a head ref matching this regexp (source ref: ie "^main$", "^hotfix/", "^(main|hotfix/.*)$").'
+    required: false
+    default: ''
+  pr-skip-user-regexp:
+    description: 'Skip checks when PR user matches this regexp (ie "^dimvic$").'
+    required: false
+    default: ''
+
+runs:
+  using: 'node16'
+  main: 'index.js'
