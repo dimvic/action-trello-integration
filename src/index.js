@@ -37,6 +37,11 @@ async function run() {
 
   core.info(`Pull Request title: ${title}`)
 
+  core.info(PR_ENFORCE_CARD_EXISTS ? 'Enforce card exists' : 'Skip card existence check')
+  return
+
+
+
   /*
    * skip if PR base ref matches regexp
    */
@@ -82,7 +87,7 @@ async function run() {
     } else {
       core.info('Could not read an card code from PR title.')
     }
-    core.info(`Issue code regexp: ${PR_CARD_CODE_REGEXP} -- ${PR_ENFORCE_CARD_EXISTS ? 'enforce' : 'dont enforce'}`)
+    core.info(`Issue code regexp: ${PR_CARD_CODE_REGEXP}`)
     return
   }
 
