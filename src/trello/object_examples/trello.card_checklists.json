@@ -1,0 +1,47 @@
+[
+  {
+    "id": "621021bd2cbfb9424d8b7f5e",
+    "name": "Test Checklist",
+    "idBoard": "5fc82f0c7bedff7f54a75de4",
+    "idCard": "62101e838e6d09311f14b372",
+    "pos": 16384,
+    "checkItems": [
+      {
+        "idChecklist": "621021bd2cbfb9424d8b7f5e",
+        "state": "incomplete",
+        "id": "621021bfa9e0da6c4d84a03e",
+        "name": "check 1",
+        "nameData": {
+          "emoji": {}
+        },
+        "pos": 17166,
+        "due": null,
+        "idMember": null
+      },
+      {
+        "idChecklist": "621021bd2cbfb9424d8b7f5e",
+        "state": "incomplete",
+        "id": "621021c001e85c5fbd309b78",
+        "name": "check 2",
+        "nameData": {
+          "emoji": {}
+        },
+        "pos": 34202,
+        "due": null,
+        "idMember": null
+      },
+      {
+        "idChecklist": "621021bd2cbfb9424d8b7f5e",
+        "state": "incomplete",
+        "id": "621021c3b5ff3f4add19c13e",
+        "name": "check 3",
+        "nameData": {
+          "emoji": {}
+        },
+        "pos": 51038,
+        "due": null,
+        "idMember": null
+      }
+    ]
+  }
+]
