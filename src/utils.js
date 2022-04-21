@@ -57,11 +57,13 @@ const buildChecklistsMarkdown = (trelloCardChecklists) => {
 
     if (checklist.checkItems) {
       markdown += checklist.checkItems.map(checkItem => {
-        if (checkItem.state === 'incomplete') {
-          return checkItem.name
+        let name = checkItem.name
+
+        if (checkItem.state !== 'incomplete') {
+          name = `--${name}--`;
         }
 
-        return `- ~~${checkItem.name.toString().trim()}~~`
+        return `- ${name}`
       }).join("\n")
     }
 
