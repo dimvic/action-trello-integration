@@ -11,7 +11,7 @@
   "author": "dimvic",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^5.0.0",
     "node-fetch": "^2.3.0",
     "lodash": "^4.17.21"
